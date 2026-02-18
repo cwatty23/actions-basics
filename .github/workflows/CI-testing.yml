@@ -26,8 +26,11 @@ jobs:
       - uses: actions/checkout@v4
 
       # Setup node.js to accept the node.js project
-      - name: SAet up Node.js
+      - name: set up Node.js
         uses: actions/setup-node@v4
+        with: 
+          node -version: "22"
+          cache: "npm"
 
       # Install dependencies and run the tests
       - name: Install dependencies
